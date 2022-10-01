@@ -1,0 +1,21 @@
+@import "../../Foundation/color.scss";
+
+.block-table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  margin: 0 auto;
+  width: 720px;
+
+  tr {
+    border-bottom: 1px solid $border;
+    font-size: 20px;
+    th {
+      width: 7em;
+    }
+    td {
+      padding: 20px 0;
+      font-weight: 500;
+    }
+  }
+}

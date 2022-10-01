@@ -1,0 +1,59 @@
+@import "../../Foundation/color.scss";
+
+.member-title {
+  font-size: 32px;
+  span {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  &::after {
+    content: "";
+    width: 110px;
+    background-color: $vividPurple;
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.member-box {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .member-item {
+    padding: 10px;
+    margin: 10px;
+    max-width: 170px;
+    color: $black;
+    font-family: "Teko", sans-serif;
+    flex-direction: column;
+    background-color: $white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 24px;
+
+    .member-icon {
+      object-fit: cover;
+      width: 100%;
+      height: 240px;
+    }
+    .member-text {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      padding: 4px 4px;
+
+      .member-number {
+        font-size: 3rem;
+        text-align: left;
+        padding-right: 4px;
+      }
+      .member-name {
+        font-size: 20px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

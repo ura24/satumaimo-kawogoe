@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+//Foundation
+@import "./Foundation/base.scss";
+@import "./Foundation/color.scss";
+
+//Layout
+@import "./Layout/header.scss";
+@import "./Layout/footer.scss";
+
+//Object
+@import "./Object/Component/c-table.scss";
+
+@import "./Object/Project/page-home.scss";
+@import "./Object/Project/page-member.scss";
+
+
+.page-title {
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  padding-top: 80px;
+
+  &::before {
+    content: '';
+    /* ↓暗いオーバーレイを半透明で配置 */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* ↓全体を覆うように配置 */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+  }
+
+  h2 {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 240px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}
+
+.block {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  &#team,
+  &#partner {
+    background-color: $white;
+  }
+  h2 {
+    font-family: 'Teko', sans-serif;
+  }
+  .link {
+    transition: all 0.2s;
+
+  }
+}
+
+.index {
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 3.2rem;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+.subtitleBox {
+  text-align: center;
+
+  &-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+
+  }
+}
+
+.sponser-list {
+  display: flex;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  .sponser-box {
+    border-color: #222;
+    border-width: 1;
+
+    .sponser {
+      align-items: center;
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .sponser-title {
+      font-size: 1rem;
+      font-weight: 100;
+      text-align: center;
+      padding-top: 16px;
+      padding-bottom: 24px;
+    }
+  }
+
+}
+
+.sns {
+  display: flex;
+  justify-content: space-between;
+  width: 880px;
+  margin: 0 auto;
+
+  .instagram,
+  .twitter {
+    padding-bottom: 30px;
+    width: 400px;
+    text-align: center;
+    color: $white;
+
+    p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+  }
+}
